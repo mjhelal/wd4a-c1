@@ -1,0 +1,39 @@
+Guia de pasos para crear una pagina web en Github
+
+1) Ir a www.github.com y crear un usuario
+2) Crear un repositorio con el mismo nombre que tendra la pagina web, por ejemplo webines (no olvidar click en readme.md)
+3) Abrir una terminal en linux. Navegar hasta una carpeta(Documents por ejemplo) 
+
+Algunos tips de linux para navegar entre carpetas:
+
+		ls  --> me muestra todas las carpetas que hay en el directorio en el cual estoy parado
+		cd xxx --> ingreso a la carpeta xxx 
+		mkdir --> crea una carpeta
+		rm yyy  --> elimina el archivo yyy
+
+		una cosa importante que ahorra mucho tiempo es que cuando empiezo a poner el nombre de una carpeta o archivo, si escribo las 
+		primeras letras y aprieto "tab"  linux me lo completa solo.
+
+4) Voy a github, y dentro del repositorio  que cree, click en Code y me copio el link para clonar el repositorio.
+
+5)Una vez dentro del directorio donde deseo crear la carpeta con el proyecto (que sera la misma carpeta que cree en github, ambas
+   carpetas quedaran conectadas. Github es un repositorio de codigo , es como dropbox o google drive pero para programacion) escribo:
+
+   		git clone "link recien copiado"
+
+   	Esto va a copiar la carpeta de Github a el directorio en el cual estoy parado. Supongamos que se llama webines. Entro al repositorio e inicio git
+
+   			cd webines
+   			git init
+
+   	Con eso ya quedan conectadas las carpetas de mi computadora y de la nube. 
+
+6) Abro un Sublime , creo my html y lo guardo en la carpeta webines . Es muy comun que el html principal de una pagina web se llame index.html  .
+
+7) Una vez que tengo el index.html en mi carpeta local... para que quede en el repositorio de github uso los comandos:
+
+			git add  index.html
+			git commit -m "breve descripcion" 
+			git push origin main
+
+8) como ultimo paso voy a github y dentro del repositorio voy a settings. scrolleo para abajo hasta llegar a GitHub Pages. Ahi pongo Branch main , folder root, y save. Me va a dar el link en el cual quedo publicada mi pagina web!!
